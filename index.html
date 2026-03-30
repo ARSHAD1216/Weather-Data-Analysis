@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Prediction Project</title>
+</head>
+
+<body style="text-align:center; font-family:Arial; margin-top:100px;">
+
+<h1>Weather Temperature Prediction</h1>
+
+<p>Latest data available till: <b>{{ last_date }}</b></p>
+
+<form action="/predict" method="post">
+
+<label>Enter number of future days:</label><br><br>
+
+<input type="number" name="days" required><br><br>
+
+<button type="submit">Predict Temperature</button>
+
+</form>
+
+{% if result %}
+<h2>{{ result }}</h2>
+{% endif %}
+
+</body>
+</html>
